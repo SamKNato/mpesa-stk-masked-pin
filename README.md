@@ -17,15 +17,15 @@ security gap in M-Pesa today: PINs typed in plain sight at supermarket checkouts
 
 ---
 
-## The Problem — A Friday Evening at Carrefour Junction
+## The Problem — A Friday Evening at Naivas Junction
 
 Imagine this scene, which plays out **millions of times every day** across Kenya.
 
-It is 6:43 PM on a Friday. You are at the checkout counter at Carrefour Junction Mall. The conveyor belt is loaded. Behind you, a queue of eight people stretches back toward the pasta aisle. The cashier — professionally friendly, two feet away — rings up your total: **KES 4,847.00.**
+It is 6:43 PM on a Friday. You are at the checkout counter at Naivas Junction Mall. Behind you, a queue of eight people stretches back toward the pasta aisle. The cashier, professionally friendly, Ask for your mobile number and triggers an Mpesa Payment payment request of your total: **KES 4,847.00.**
 
-Your phone buzzes. The STK Push prompt appears. You unlock, open the dialog, and start typing your M-Pesa PIN.
+The STK Mpesa Push prompt appears and you start typing your M-Pesa PIN.
 
-**Six digits. In full view of:**
+**four digits. In full view of:**
 - 👤 The cashier, 60 cm from your screen
 - 👤 The customer immediately behind you
 - 📹 Three overhead CCTV cameras pointed at the checkout area
@@ -35,7 +35,7 @@ You press OK. Transaction complete. You collect your bags. You have no idea that
 
 **This is not a hypothetical. This is every Nairobi supermarket, every petrol station, every pharmacy, every till, every day.**
 
-And it is entirely, trivially fixable — with a single new API parameter.
+And it is entirely, trivially fixable  with a single new API parameter.
 
 ---
 
