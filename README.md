@@ -17,7 +17,7 @@ security gap in M-Pesa today: PINs typed in plain sight at supermarket checkouts
 
 ---
 
-## The Problem — A Friday Evening at Naivas Junction
+## The Problem, A Friday Evening at Naivas Junction
 
 Imagine this scene, which plays out **millions of times every day** across Kenya.
 
