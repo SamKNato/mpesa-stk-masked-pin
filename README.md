@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔒 M-Pesa STK Push — Masked PIN Proposal
+# 🔒 M-Pesa STK Push, Masked PIN 
 
 **Official proposal + reference implementation to eliminate the biggest real-world  
 security gap in M-Pesa today: PINs typed in plain sight at supermarket checkouts.**
