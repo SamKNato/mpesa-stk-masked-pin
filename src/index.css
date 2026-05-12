@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ──────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-slate-800 font-sans;
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-mpesa-green ring-offset-2;
+  }
+}
+
+/* ── Component utilities ──────────────────────────────────────────────────── */
+@layer components {
+
+  /* Phone device frame */
+  .phone-frame {
+    @apply relative mx-auto rounded-[2.5rem] bg-gray-950 overflow-hidden;
+    width: 280px;
+    height: 560px;
+    box-shadow: var(--tw-shadow, 0 40px 80px rgba(0,0,0,0.45));
+  }
+
+  .phone-frame::before {
+    /* Notch / dynamic island */
+    content: '';
+    @apply absolute top-3 left-1/2 -translate-x-1/2 z-10;
+    width: 80px;
+    height: 24px;
+    background: #000;
+    border-radius: 12px;
+  }
+
+  .phone-screen {
+    @apply absolute inset-0 flex items-center justify-center;
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    padding-top: 40px;
+  }
+
+  /* M-Pesa dialog */
+  .mpesa-dialog {
+    @apply bg-white rounded-2xl overflow-hidden w-[240px];
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35);
+  }
+
+  .mpesa-dialog-header {
+    @apply flex items-center gap-2 px-4 py-3;
+    background: #00A651;
+  }
+
+  .mpesa-logo {
+    @apply text-white font-bold text-sm tracking-wider;
+  }
+
+  /* PIN box individual character cell */
+  .pin-box {
+    @apply w-9 h-10 border-2 border-slate-200 rounded-lg flex items-center justify-center
+           text-slate-800 font-mono font-bold text-base transition-all duration-100;
+  }
+
+  .pin-box.active {
+    @apply border-mpesa-green bg-mpesa-green-pale;
+    animation: pulse-green 1.5s ease-in-out infinite;
+  }
+
+  .pin-box.filled {
+    @apply border-mpesa-green bg-mpesa-green-pale;
+  }
+
+  /* Mode toggle pill */
+  .mode-tab {
+    @apply px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200
+           cursor-pointer select-none;
+  }
+
+  .mode-tab.active {
+    @apply bg-mpesa-green text-white shadow-md;
+  }
+
+  .mode-tab.inactive {
+    @apply text-slate-500 hover:text-slate-700;
+  }
+
+  /* Code block */
+  .code-block {
+    @apply bg-slate-900 text-slate-100 rounded-xl p-4 font-mono text-xs leading-relaxed
+           overflow-x-auto;
+  }
+
+  /* Security badge */
+  .security-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .security-badge.danger {
+    @apply bg-red-50 text-red-600 border border-red-200;
+  }
+
+  .security-badge.safe {
+    @apply bg-mpesa-green-pale text-mpesa-green-dark border border-green-200;
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+
+/* ── Utility ──────────────────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #00A651 0%, #007A3D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
